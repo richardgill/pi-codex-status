@@ -164,14 +164,26 @@ Default cache path:
 
 ## Development
 
+Building and testing against the current Pi TUI requires Node.js 22.19 or newer. Standalone CLI/library installs still require only Node.js 20.6 or newer.
+
 ```bash
 git clone https://github.com/lhl/pi-codex-status
 cd pi-codex-status
-npm install
+npm ci --ignore-scripts
 npm run check
 npm test
+```
+
+Pi supplies `@earendil-works/pi-tui` when loading the extension. It is an optional peer so standalone CLI/library installs do not install a second Pi runtime. The development dependency supplies types and renderer tests only; it is not bundled in `dist/`.
+
+Before loading a local checkout in Pi, build/test first, then remove development dependencies:
+
+```bash
+npm prune --omit=dev --ignore-scripts
 pi install .
 ```
+
+Run `npm ci --ignore-scripts` to restore development dependencies before rebuilding.
 
 Release checklist: [`docs/PUBLISH.md`](docs/PUBLISH.md).
 

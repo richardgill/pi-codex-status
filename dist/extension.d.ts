@@ -1,4 +1,4 @@
-import { Text } from "@mariozechner/pi-tui";
+import { Text } from "@earendil-works/pi-tui";
 type ThemeLike = {
     fg?: (name: string, text: string) => string;
     bold?: (text: string) => string;

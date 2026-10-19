@@ -1,4 +1,4 @@
-import { Text } from "@mariozechner/pi-tui";
+import { Text } from "@earendil-works/pi-tui";
 import { readCachedSnapshot, writeCachedSnapshot } from "./cache.js";
 import { formatJson, formatStatus, formatStatusline } from "./format.js";
 import { parseCodexRateLimitHeaders } from "./rate-limits.js";
