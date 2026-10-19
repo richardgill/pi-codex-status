@@ -49,15 +49,15 @@
     "node": ">=20.6.0"
   },
   "devDependencies": {
-    "@earendil-works/pi-tui": "^1.3.0",
+    "@mariozechner/pi-tui": "^0.73.0",
     "@types/node": "^24.3.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "@earendil-works/pi-tui": "*"
+    "@mariozechner/pi-tui": "*"
   },
   "peerDependenciesMeta": {
-    "@earendil-works/pi-tui": {
+    "@mariozechner/pi-tui": {
       "optional": true
     }
   }
